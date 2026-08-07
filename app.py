@@ -2,13 +2,17 @@ import pickle
 import streamlit as st
 import requests
 
+from dotenv import load_dotenv
+import os
 
+load_dotenv()
+
+API_KEY = os.getenv("TMDB_API_KEY")
 # -----------------------------
 # Fetch movie poster from TMDB
 # -----------------------------
 def fetch_poster(movie_id):
-    url = f"https://api.themoviedb.org/3/movie/{movie_id}?api_key=b6e74b622cce0a6c4a41e5193c94f20d&language=en-US"
-
+    url = f"https://api.themoviedb.org/3/movie/{movie_id}?api_key={API_KEY}&language=en-US"
     response = requests.get(url)
 
     if response.status_code != 200:
