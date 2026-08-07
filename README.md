@@ -25,8 +25,8 @@ A content-based Movie Recommendation System built using Python, Streamlit, and M
 Movie-Recommender-System/
 │── app.py
 │── main.py
-│── movie_dict.pkl
-│── similarity.pkl
+│── movie_dict (1).pkl
+│── similarity (1).pkl
 │── movies.pkl
 │── requirements.txt
 │── README.md
